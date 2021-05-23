@@ -1,0 +1,1 @@
+export LLOCAL_CORE=$HOME/.llocal/core
