@@ -1,4 +1,4 @@
-#!/bin/zsh
+# <dir> - helper for sourcing all the covered subfolders in a <dir>
 
 # allow default to be PWD?
 function llsource_dir() {

@@ -1,4 +1,4 @@
-#!/bin/zsh
+# Prints out a message about LLOCAL on install
 
 function llocal() {
   llcolor $MAGENTA $LLOCAL_TEXT
