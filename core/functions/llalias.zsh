@@ -1,4 +1,4 @@
-#!/bin/zsh
+# <name> <command> - runs your <command> when you call <alias> in the shell
 
 function llalias() {
   filename=$(lldowncase $1)
