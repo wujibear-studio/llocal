@@ -1,3 +1,4 @@
+# Pretty text partial to say USER
 export LLOCAL_USER_TITLE="
 ██╗░░░██╗░██████╗███████╗██████╗░
 ██║░░░██║██╔════╝██╔════╝██╔══██╗

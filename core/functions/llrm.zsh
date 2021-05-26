@@ -1,18 +1,9 @@
-#!/bin/zsh
-
+# <name> - WIP Removes the user created file by the same <name>
 function llrm() {
   folder=""
   type=""
-  while getopts ":h:e:f:a:p:" opt; do
+  while getopts ":e:f:a:p:" opt; do
     case ${opt} in
-      h )
-        echo "Usage:"
-        echo "    llrm -a <name>       Remove the <name> alias"
-        echo "    llrm -e <name>       Remove the <name> export"
-        echo "    llrm -f <name>       Remove the <name> function"
-        echo "    llrm -p <name>       Remove the <name> partial"
-        return 0
-        ;;
       e )
         folder="exports"
         type="export"

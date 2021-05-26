@@ -1,4 +1,4 @@
-#!/bin/zsh
+# <name> <value> - creates a <name> export with <value> as the value
 
 function llexport() {
   export_name=$(llupcase $1)

@@ -1,4 +1,4 @@
-#!/bin/zsh
+# WIP - edit a file with your favourite editor
 
 function lledit() {
   folder=""

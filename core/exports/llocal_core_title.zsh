@@ -1,3 +1,4 @@
+# pretty text partial to say CORE
 export LLOCAL_CORE_TITLE="
 ░█████╗░░█████╗░██████╗░███████╗
 ██╔══██╗██╔══██╗██╔══██╗██╔════╝

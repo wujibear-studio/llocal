@@ -1,4 +1,4 @@
-#!/bin/zsh
+# <color_name> <text> <style?> - a helper to print <text> in <color_name>
 
 # Colors
 export BLACK="30m"

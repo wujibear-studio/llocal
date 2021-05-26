@@ -1,8 +1,5 @@
-#!/bin/zsh
+# <folder_type> <filename> <type?> - Removes <filename> from <folder_type>
 
-# @param foldername
-# @param filename
-# @param type
 function llremove() {
   type=${3:=thing}
   filename=$(lldowncase $2)
