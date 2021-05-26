@@ -28,23 +28,23 @@ function llist_set() {
 
 # <folder_path> <folder_name> - helper to llist all files in a subfolder 
 function llist_dir() {
-  dir_path=$1/$folder
+  dir_path="$1/$folder"
+  [ ! -d $dir_path ] && return
+
   folder_contents=$(ls -A $dir_path)
+  [ ${#folder_contents} -eq 0 ] && return
 
-  if [ ${#folder_contents} -gt 0 ]
-  then 
-    folder_name=$(llupcase $folder)
-    llcolor $LIGHT_MAGENTA "\n\n$folder_name"
-    llcolor $MAGENTA "######################"
+  folder_name=$(llupcase $folder)
+  llcolor $LIGHT_MAGENTA "\n\n$folder_name"
+  llcolor $MAGENTA "######################"
 
-    printf "%33s %s\n" $(llcolor $MAGENTA "name" $BOLD) $(llcolor $MAGENTA "description/preview" $ITALIC)
+  printf "%33s %s\n" $(llcolor $MAGENTA "name" $BOLD) $(llcolor $MAGENTA "description/preview" $ITALIC)
 
-    for file in $1/$folder/*.zsh
-    do
-      if [[ -f $file ]]
-      then
-        llist_file $file
-      fi
-    done
-  fi
+  for file in $1/$folder/*.zsh
+  do
+    if [[ -f $file ]]
+    then
+      llist_file $file
+    fi
+  done
 }
