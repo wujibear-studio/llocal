@@ -22,12 +22,12 @@ git clone git@github.com:wujibear-studio/llocal.git $HOME/.llocal && $HOME/.lloc
 ```
 
 ### Cloning
-You'll want to clone this repo to your home folder under `.llocal`
+If you'd rather the hands-on approach, all you to do is clone the repo and source the `init.zsh` file.
 ```shell
 git clone git@github.com:wujibear-studio/llocal.git $HOME/.llocal
 ```
 
-Add the following to the top of your `~/.zshrc` file:
+Add the following to the top of your `~/.zshrc` file (or replace it with):
 ```shell
 source $HOME/.llocal/init.zsh
 ```
@@ -37,11 +37,16 @@ Your user defined aliases, functions, exports, and partials are just `.zsh` file
 They get stored in your `~/.llocal/user/<folder>`, where `<folder>` is the folder with the same name of its type. e.g., `~/.llocal/user/exports`
 
 ### Things you'll use:
+- `llist` - Lists all commands/things in llocal core and user directories with descriptions
 - `llalias <name> <value>` - Creates an alias with a key of the `<name>` input, and its value is `<value>`
 - `llexport <name> <value>` - Creates an export with a key of the `<name>` input, and its value is `<value>`
+- `llfunction <name>` - Creates a `<name>` function from a template
+- `llpartial <name>` - Creates a `<name>` partial, and opens it in your defined `$EDITOR`
 - `llsource` - Sources `$LLOCAL_SHELL`, which defaults to `$HOME/.zshrc`
+- `lledit -<type> <name>` - Opens the `<name>.zsh` file from the matching `<type>` of directory in your `$EDITOR`. `<type>` is one of the initials for `e`xport, `p`artial, `a`lias, or `f`unction.
+- `llrm -<type> <name>` - Removes the `<name>.zsh` file from the matching `<type>` of directory, where `<type>` is one of the initials for `e`xport, `p`artial, `a`lias, or `f`unction.
 
-Llocal is made up of re-usable shell functions, the full list of them can be found in the `.llocal/core` directory.
+Llocal is made up of re-usable shell functions, call `llist` or view them in the `.llocal/core` directory.
 
 ## Backing up your stuff
 
