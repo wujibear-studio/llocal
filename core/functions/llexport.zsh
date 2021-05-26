@@ -1,15 +1,18 @@
 #!/bin/zsh
 
 function llexport() {
-  file=$LLOCAL_USER/exports/$1.zsh
-  export=$(llupcase $1)
+  export_name=$(llupcase $1)
+  filename=$(lldowncase $1)
+  dir=$LLOCAL_USER/exports
+  file=$dir/$filename.zsh
+  mkdir -p $dir
 
   if [ -f $file ]; then
     echo "You already have a $filename export"
     return 
   fi
-  echo "export $export=$2" > $file
+  echo "export $export_name=$2" > $file
 
-  echo "Made a neato new $export export for ya, and..."
+  echo "Made a neato new $export_name export for ya, and..."
   llsource
 }
