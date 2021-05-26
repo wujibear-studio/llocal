@@ -1,31 +1,26 @@
-# <name> - WIP Removes the user created file by the same <name>
+# <-flag[e|f|a|p]> <name> - Removes the <name> from the matching option e.g., llrm -e <name>
 function llrm() {
-  folder=""
-  type=""
-  while getopts ":e:f:a:p:" opt; do
-    case ${opt} in
-      e )
+  unset folder
+  unset type
+  while getopts ":e:f:a:p" FLAG; do
+    case ${FLAG} in
+      e)
         folder="exports"
         type="export"
         ;;
-      f )
+      f)
         folder="functions"
         type="function"
         ;;
-      a )
+      a)
         folder="aliases"
         type="alias"
         ;;
-      p )
+      p)
         folder="partials"
         type="partial"
         ;;
-    \? )
-      echo "Invalid Option: -$OPTARG" 1>&2
-      return 1
-      ;;
     esac
   done
-
-  llremove $folder $1 $type
+  llremove $folder $2 $type
 }

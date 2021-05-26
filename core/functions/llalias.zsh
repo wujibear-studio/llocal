@@ -12,6 +12,6 @@ function llalias() {
 
   echo "alias $1=\"$2\"" > $file
 
-  echo "Made a neato new $1 alias for ya, and..."
+  llcolor $GREEN "Made a neato new $1 alias for ya, and..."
   llsource
 }
