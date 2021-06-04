@@ -1,4 +1,4 @@
-# <-flag[e|f|a|p]> <name> - Edits the <name> file from the matching option e.g., llrm -e <name>
+# <-flag[e|f|a|p]> <name> - Edits the <name> file from the matching option e.g., for exports: llrm -e <name>
 function lledit() {
   unset folder
   unset type

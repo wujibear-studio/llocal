@@ -10,6 +10,13 @@ function llist() {
 # <filepath> - helper for llisting a single file
 function llist_file() {
   name=$1:t:r
+  folder=$(dirname $1)
+  type=$(basename $folder)
+
+  if [ $type = 'exports' ]; then
+    name=$(llupcase $name)
+  fi
+
   description=$(head -n 1 $1)
   printf "%33s %-44s\n" $(llcolor $YELLOW $name $BOLD) "$(llcolor $YELLOW $description $ITALIC)"
 }

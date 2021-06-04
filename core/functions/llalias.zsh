@@ -1,4 +1,4 @@
-# <name> <command> - runs your <command> when you call <alias> in the shell
+# <alias_name> <command> - runs your <command> when you call <alias_name> in the shell
 function llalias() {
   filename=$(lldowncase $1)
   dir=$LLOCAL_USER/aliases
