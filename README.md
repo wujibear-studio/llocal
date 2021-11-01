@@ -4,7 +4,7 @@
 LLOCAL adds some core shell functions that lets you do CRUD operations on your shell exports, aliases, functions, and partials.
 It was made with zsh in mind, but should work fine for those using bash.
 
-<img width="956" alt="Screen Shot 2021-11-01 at 10 29 22 AM" src="https://user-images.githubusercontent.com/81192469/139714153-8f00cf93-1412-483d-b42f-5954cf7cec43.png">
+<img width="953" alt="Screen Shot 2021-11-01 at 10 30 55 AM" src="https://user-images.githubusercontent.com/81192469/139714328-cf20d134-72c3-4517-b2ab-d7fd6eb7e6b3.png">
 
 ## Table of Contents:
 1. [TL;DR](#tl-dr)
